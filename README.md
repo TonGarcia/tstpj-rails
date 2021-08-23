@@ -1,3 +1,11 @@
+# Node version fix
+
+1. n install stable: ``` $ npm install -g n && sudo n stable && node -ve ```
+2. nvm select version: ``` $ nvm use 14.17.5 ```
+3. nvm for each project: ``` $ .nvmrc ``` >> ``` v14.17.5 ```
+4. select nvm from .nvmrc: ``` $ nvm use ```
+5. node globally version: ``` nvm alias default 14.17.5 ```
+
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -91,4 +99,4 @@ Utilizando git como ferramenta de controle de versões, expresse os comandos nec
 
 # SCAFFOLDS
 1. ``` $ rails g scaffold Especialidade descricao:string ativo:boolean localidade:string ```
-2. ``` $ rails g scaffold Funcionario nome_completo:string endereco:string especialidade ```
+2. ``` $ rails g scaffold Funcionario nome_completo:string endereco:string especialidade:belongs_to data_admissao:date data_dispensa:date ```

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome completo:</strong>
+  <%= @funcionario.nome_completo %>
+</p>
+
+<p>
+  <strong>Endereco:</strong>
+  <%= @funcionario.endereco %>
+</p>
+
+<p>
+  <strong>Especialidade:</strong>
+  <%= @funcionario.especialidade_id %>
+</p>
+
+<p>
+  <strong>Data admissao:</strong>
+  <%= @funcionario.data_admissao %>
+</p>
+
+<p>
+  <strong>Data dispensa:</strong>
+  <%= @funcionario.data_dispensa %>
+</p>
+
+<%= link_to 'Edit', edit_funcionario_path(@funcionario) %> |
+<%= link_to 'Back', funcionarios_path %>
