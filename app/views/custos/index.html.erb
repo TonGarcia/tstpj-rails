@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Custos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cost value</th>
+      <th>Employee</th>
+      <th>Ordem</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @custos.each do |custo| %>
+      <tr>
+        <td><%= custo.cost_value %></td>
+        <td><%= custo.employee_id %></td>
+        <td><%= custo.ordem %></td>
+        <td><%= link_to 'Show', custo %></td>
+        <td><%= link_to 'Edit', edit_custo_path(custo) %></td>
+        <td><%= link_to 'Destroy', custo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Custo', new_custo_path %>

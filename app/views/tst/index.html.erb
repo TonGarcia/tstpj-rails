@@ -1,0 +1,46 @@
+<style type="text/css">
+  table.machine_table {
+      border: 1px solid #0047AB;
+  }
+
+  table.machine_table thead tr, table.machine_table tbody tr {
+      border: 1px solid #EEAD2D;
+      height: 1px;
+  }
+</style>
+
+<table class="machine_table">
+  <thead>
+    <th>Código</th>
+    <th>Descrição</th>
+    <th>Tempo</th>
+  </thead>
+  <tbody>
+    <% for indice in (1..5) %>
+<!--      <tr></tr>-->
+      <td> <%= indice %> </td>
+      <td> <%= "desc_#{indice}" %> </td>
+      <td> <%= indice*2 %> </td>
+    <% end %>
+  </tbody>
+</table>
+
+
+<h1> Texto 1 </h1>
+<span>Texto2</span>
+<div style="display: inline-flex;margin-left: 10px;">
+  <p style="margin-right: 5px;"> OK1 </p>
+  <p> NOK1 </p>
+</div>
+<div style="display: inline-block; margin-left: 20px;">
+  <p style="margin-right: 5px;"> OK2 </p>
+  <p> nOK2 </p>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+    (function() {
+        var a = b =3;
+    })();
+    console.log("a defined? " + (typeof a !== undefined));
+    console.log("b defined? " + (typeof b !== undefined));
+</script>

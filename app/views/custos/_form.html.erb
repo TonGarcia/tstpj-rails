@@ -1,0 +1,32 @@
+<%= form_with(model: custo, local: true) do |form| %>
+  <% if custo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(custo.errors.count, "error") %> prohibited this custo from being saved:</h2>
+
+      <ul>
+        <% custo.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :cost_value %>
+    <%= form.text_field :cost_value %>
+  </div>
+
+  <div class="field">
+    <%= form.label :employee_id %>
+    <%= form.number_field :employee_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ordem %>
+    <%= form.number_field :ordem %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
